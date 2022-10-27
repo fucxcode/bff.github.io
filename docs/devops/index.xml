@@ -1,0 +1,65 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BFF – 测试与发布</title>
+    <link>http://bff.github.io/docs/devops/</link>
+    <description>Recent content in 测试与发布 on BFF</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="http://bff.github.io/docs/devops/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: 自动化测试</title>
+      <link>http://bff.github.io/docs/devops/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://bff.github.io/docs/devops/test/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;单元测试&#34;&gt;单元测试&lt;/h2&gt;
+&lt;p&gt;单元测试的范围：&lt;code&gt;resources&lt;/code&gt;、&lt;code&gt;logic&lt;/code&gt;、&lt;code&gt;utility&lt;/code&gt;、&lt;code&gt;pkg&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;单元测试方法参考： &lt;a href=&#34;https://doc.repo.cloud.io/TEST/APITEST/testing/index.html#&#34;&gt;https://doc.repo.cloud.io/TEST/APITEST/testing/index.html#&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;单元测试需要连接几个服务，服务的地址不要写内部IP，可以写：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mongo.cloud.top&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;redis.cloud.top&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;clickhouse.cloud.top&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 平滑升级方案</title>
+      <link>http://bff.github.io/docs/devops/upgrade/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://bff.github.io/docs/devops/upgrade/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 版本说明</title>
+      <link>http://bff.github.io/docs/devops/version/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://bff.github.io/docs/devops/version/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

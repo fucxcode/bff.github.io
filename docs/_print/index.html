@@ -1,0 +1,1768 @@
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.104.3" />
+<link rel="canonical" type="text/html" href="http://bff.github.io/docs/">
+<link rel="alternate" type="application/rss&#43;xml" href="http://bff.github.io/docs/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Documentation | BFF</title>
+<meta name="description" content="BFF技术文档
+">
+<meta property="og:title" content="Documentation" />
+<meta property="og:description" content="BFF中文文档" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://bff.github.io/docs/" /><meta property="og:site_name" content="BFF" />
+
+<meta itemprop="name" content="Documentation">
+<meta itemprop="description" content="BFF中文文档"><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Documentation"/>
+<meta name="twitter:description" content="BFF中文文档"/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.79e3930541ca05b5395c14b2a313b798fad1dc69f9a14aefa57b62eaa9f65f14.css" as="style">
+<link href="/scss/main.min.79e3930541ca05b5395c14b2a313b798fad1dc69f9a14aefa57b62eaa9f65f14.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+  crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-00000000-0', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  </head>
+  <body class="td-section">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500"><g><path style="fill:#fff" d="M116.8525 421.9722c-5.7041.0-10.3442-4.3127-10.3442-9.6129V88.183c0-5.3002 4.6401-9.6117 10.3442-9.6117H320.858c3.0347.0 9.3959.5498 11.7506 2.6302l.3545.3442 58.905 63.2912c2.3101 2.491 2.9202 8.4928 2.9202 11.3184v256.2039c0 5.3002-4.6407 9.6129-10.3436 9.6129H116.8525z"/><g><g><g><path style="fill:#767676" d="M384.4445 423.2066H116.852c-6.3839.0-11.5786-4.8658-11.5786-10.8474V88.1831c0-5.9804 5.1947-10.8461 11.5786-10.8461h204.0062c.377.0 9.2786.0329 12.568 2.9389l.3947.3833 58.9508 63.337c3.2135 3.4652 3.2514 11.7924 3.2514 12.1593v256.2036C396.0231 418.3408 390.8284 423.2066 384.4445 423.2066zM116.5079 411.9189c.0848.0278.1999.0531.3441.0531h267.5925c.1442.0.2581-.0253.3441-.0531V156.1556c-.0076-.9033-.3593-3.7347-.7034-5.0037l-57.6527-61.9416c-1.4651-.3176-4.4533-.6389-5.5742-.6389H116.852c-.143.0-.2594.024-.3441.0531V411.9189zm267.4533-261.149zM327.0321 89.371v.0013V89.371z"/></g></g></g><g><g><path style="fill:#5b7fc0" d="M189.0874 210.1754l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4473C177.5953 212.627 183.0601 210.1742 189.0874 210.1754zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 234.1722 197.0804 232.033z"/><path style="opacity:.3;fill:#fff" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/><g><defs><path id="SVGID_1_" d="M194.7376 237.6875c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 234.2399 196.1861 236.239 194.7376 237.6875z"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_2_);fill:#fff" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/><path style="opacity:.13;clip-path:url(#SVGID_2_);fill:#020202" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/></g><g><defs><path id="SVGID_3_" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/></defs><clipPath id="SVGID_4_"><use xlink:href="#SVGID_3_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_4_);fill:#5b7fc0" d="M172.6595 215.6045c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8475-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 209.1953 176.6171 211.647 172.6595 215.6045z"/></g></g><rect x="198.8952" y="225.1043" style="fill:#5b7fc0" width="122.6266" height="13.8671"/></g><g><path style="fill:#d95140" d="M189.0874 155.7611l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.0249 2.454-11.4897 6.4116-15.4473C177.5953 158.2128 183.0601 155.7599 189.0874 155.7611zm7.993 21.8577c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.2508 181.7667 197.0816 179.758 197.0804 177.6188z"/><path style="opacity:.3;fill:#fff" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/><g><defs><path id="SVGID_5_" d="M194.7376 183.2733c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 179.8256 196.1861 181.8248 194.7376 183.2733z"/></defs><clipPath id="SVGID_6_"><use xlink:href="#SVGID_5_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_6_);fill:#fff" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/><path style="opacity:.13;clip-path:url(#SVGID_6_);fill:#020202" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/></g><g><defs><path id="SVGID_7_" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/></defs><clipPath id="SVGID_8_"><use xlink:href="#SVGID_7_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_8_);fill:#d95140" d="M172.6595 161.1903c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 154.7811 176.6171 157.2327 172.6595 161.1903z"/></g><rect x="198.8952" y="170.69" style="fill:#d95140" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#56a55c" d="M189.5379 264.6147l.0012-.0012c7.7751.0012 15.0294 4.1862 18.932 10.9235 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032-5.8394.0-11.3281-2.2733-15.458-6.4032-4.13-4.13-6.4032-9.6186-6.4056-15.4628.0012-6.0249 2.454-11.4897 6.4116-15.4472C178.0458 267.0663 183.5105 264.6135 189.5379 264.6147zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6538 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.7013 290.6202 197.5321 288.6115 197.5309 286.4723z"/><path style="opacity:.3;fill:#fff" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/><g><defs><path id="SVGID_9_" d="M195.1881 292.1268c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9941 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.5344 288.6792 196.6366 290.6783 195.1881 292.1268z"/></defs><clipPath id="SVGID_10_"><use xlink:href="#SVGID_9_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_10_);fill:#fff" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/><path style="opacity:.13;clip-path:url(#SVGID_10_);fill:#020202" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/></g><g><defs><path id="SVGID_11_" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/></defs><clipPath id="SVGID_12_"><use xlink:href="#SVGID_11_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_12_);fill:#56a55c" d="M173.11 270.0439c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7325-11.1497-10.9151-18.926-10.9151C182.5311 263.6346 177.0676 266.0863 173.11 270.0439z"/></g></g><rect x="199.3456" y="279.5436" style="fill:#56a55c" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#f1bc42" d="M189.0874 318.7208l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3305-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4472C177.5953 321.1724 183.0601 318.7196 189.0874 318.7208zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 342.7176 197.0804 340.5784z"/><path style="opacity:.3;fill:#fff" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/><g><defs><path id="SVGID_13_" d="M194.7376 346.2329c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 342.7853 196.1861 344.7844 194.7376 346.2329z"/></defs><clipPath id="SVGID_14_"><use xlink:href="#SVGID_13_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_14_);fill:#fff" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/><path style="opacity:.13;clip-path:url(#SVGID_14_);fill:#020202" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/></g><g><defs><path id="SVGID_15_" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/></defs><clipPath id="SVGID_16_"><use xlink:href="#SVGID_15_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_16_);fill:#f1bc42" d="M172.6595 324.15c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8474-1.0151-7.6327-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 317.7407 176.6171 320.1924 172.6595 324.15z"/></g></g><rect x="198.8952" y="333.6497" style="fill:#f1bc42" width="122.6266" height="13.8671"/></g></g></svg></span><span class="font-weight-bold">BFF</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/about/" ><span>关于</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link active" href="/docs/" ><span class="active">文档</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/blog/" ><span>博客</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/community/" ><span>社区</span></a>
+			</li>
+			
+			
+			
+			<li class="nav-item dropdown mr-4 d-none d-lg-block">
+				
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	中文
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	
+	<a class="dropdown-item" href="/en/docs/">English</a>
+	
+</div>
+			</li>
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block"><input type="search" class="form-control td-search-input" placeholder="&#xf002; " aria-label="" autocomplete="off">
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+
+<a href="#" onclick="print();return false;"></a>.
+</p><p>
+<a href="/docs/"></a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Documentation</h1>
+
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1: <a href="#pg-6e17e09fffc1050f46600282def85180">概览</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1.1: <a href="#pg-cc95ce7cb0520bd4840422aea2ba01d5">在资源池运营管理平台中的应用</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-75d992297341a7f1e4f144c03129e75b">使用说明</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>2.1: <a href="#pg-ff7a5a7a41228353ddecb8ac072de5d3">基于BFF镜像定制产品侧BFF镜像</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2.2: <a href="#pg-51459a0616fc8b9b2f5bcaa3d6870b55">初始化数据</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>2.2.1: <a href="#pg-e7355f2b93033080d0bf53d7e3e47ea1">初始化数据字段说明</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2.2.2: <a href="#pg-57cad078b85dc1eaa34a2fadfa5a0d41">初始化数据修改记录</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+
+    </ul>
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-b023065966ab1987bd29973b5b1011ce">模块</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>3.1: <a href="#pg-aaed92e298af16dfe2adff15eca64484">操作日志</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>3.2: <a href="#pg-fad3c48d9b9cb8456e64fd6c4716e8f1">权限管理</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>3.3: <a href="#pg-49e0b16c20586754c90904a00672bdf3">消息中心</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>4: <a href="#pg-c41cb405ac91671df05dd6d78a5d47dc">测试与发布</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>4.1: <a href="#pg-956e67d93f8e9469204a17fb4f51e6eb">自动化测试</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>4.2: <a href="#pg-a89a4202241db29d9eb8a56f86eef85f">平滑升级方案</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>4.3: <a href="#pg-56f1c8461768da20a6a7f6c845de41d6">版本说明</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+
+    </ul>
+    
+  
+
+    </ul>
+
+
+<div class="content">
+      <p>BFF技术文档</p>
+
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-6e17e09fffc1050f46600282def85180">1 - 概览</h1>
+    <div class="lead">Backends For Frontends 服务于前端的后端</div>
+	<h1 id="bff">BFF</h1>
+<p>Backends For Frontends 服务于前端的后端</p>
+
+
+
+
+
+
+
+<div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 738px">
+	<img class="card-img-top" src="/docs/overview/BFF%E6%A1%86%E6%9E%B61_hu934afbf17e6a761bb8e65479628cc1bb_127646_900x900_fit_catmullrom_3.png" width="728" height="743">
+	
+	<div class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+</p>
+	</div>
+	
+</div>
+<h2 id="简介">简介</h2>
+<p>鉴于虚拟化平台内部包含多个Web服务，包括：运营管理平台、云安全控制台、虚拟化平台管理界面等，这些服务有一部分接口是重复的，并且像认证、权限、安全、和前端对接等方面的处理逻辑基本是相同的。基于现在CBB的开发思想，我们考虑能不能有个框架实现管理平台的共有功能，避免大家做太多重复工作，同时提高产品开发效率。</p>
+<p>这里设计了BFF（服务于前端的后端），实现和前端框架对接和基础的公共模块封装。</p>
+<p>BFF不同于常说的web框架，比如echo、go-zero，它是基于web框架开发的业务框架。</p>
+<h3 id="bff功能">BFF功能</h3>
+<h4 id="与前端对接">与前端对接</h4>
+<p>登陆认证、消息中心、前后端数据加密对接、重放攻击等安全组件对接。</p>
+<h4 id="内置公共api服务">内置公共API服务</h4>
+<p>认证管理、用户管理、系统配置、审计日志、消息中心、下载中心、级联管理、升级管理(文件上传)、大屏展示、CBB组合、k3s集群管理</p>
+<h4 id="为内部api服务提供代理">为内部API服务提供代理</h4>
+<p>通过rest proxy中间件为产品侧API提供代理。（实现原理同资源池网元二级代理）</p>
+<h2 id="bff框架">BFF框架</h2>
+
+
+
+
+
+
+
+<div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 738px">
+	<img class="card-img-top" src="/docs/overview/BFF%E6%A1%86%E6%9E%B61_hu934afbf17e6a761bb8e65479628cc1bb_127646_900x900_fit_catmullrom_3.png" width="728" height="743">
+	
+	<div class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+</p>
+	</div>
+	
+</div>
+<p>就像BFF名称那样，服务于前端的后端，它是和前端框架深度对接的。使用BFF和与BFF配套的前端框架，基本的界面架构和功能就有了。</p>
+<p>BFF有三种使用模式：</p>
+<ul>
+<li>直连：后端API服务与BFF共享配置，认证、鉴权等都自己做。该模式虽然需要后端API服务自己做一些事情，但是很简单，只需要仿照BFF加载插件就行。</li>
+<li>代理：请求先过BFF，认证、鉴权等BFF做，之后代理到后端API服务。该模式下，BFF也可以啥都不做，只做代理，或者只提供前端web服务，或者只加载部分功能。</li>
+<li>组合：根据需求，对多个CBB API进行封装，提供更接近产品需求的接口。该模式相当于BFF内部API。</li>
+</ul>
+<h3 id="直连模式">直连模式</h3>
+
+
+
+
+
+
+
+<div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 495px">
+	<img class="card-img-top" src="/docs/overview/BFF-initial_hu54adb276a8a6ab95cbeff974f95222bd_29026_600x400_fit_catmullrom_3.png" width="485" height="314">
+	
+	<div class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+</p>
+	</div>
+	
+</div>
+<p>在使用直连模式时，BFF作为网关和产品侧API之间的媒介存在。产品侧API服务启动时，从BFF GRPC服务处拉取配置，根据BFF返回的配置启动rest服务，这样保证所有API服务的配置是相同的。配置相同，又基于相同的框架，所有API服务的加密、认证、权限等插件都是互认的，对GW另一侧来说他们是一个服务。</p>
+<h3 id="代理模式">代理模式</h3>
+<p>所有请求先到BFF，然后经过BFF中的一些列安全插件，最后如果是BFF内部接口，则直接调用对应的handler，如果是其它API服务的接口，则通过代理转给内部的API服务。</p>
+<p><strong>上图中只列举了几个关键的rest middlewares。</strong></p>
+<p>产品侧API启动时调用BFF RPC拿配置，然后启动服务，启动后再次调用BFF RPC上报自己包含的routes。BFF代理功能是基于rest框架中的proxy插件实现的，该插件基于各产品侧服务上报的routes信息提供代理服务。这里产品侧服务启动时不需要像初期那样，加载太多的中间件，只需要加载recover、logger等最基本的中间件即可。</p>
+<p>BFF框架对内部API服务使用的框架没有硬性要求，可以采用rest、go-zero、bahamut等，只要启动时按格式把路由列表提交给BFF就行。</p>
+<p>另外BFF还提供前端静态文件服务。这样做有两个特殊的场景：</p>
+<ul>
+<li>前后端可以编译为一个可执行文件</li>
+<li>前后端默认加密key（在前端js源码里面），可以通过代码动态修改。</li>
+</ul>
+<p>如果CBB需要有自己的界面，可以使用这种模式。基本上自己填俩界面就可以了。</p>
+<h3 id="组合模式">组合模式</h3>
+<p>组合模式用于根据需求整合多个CBB资源，提供更接近产品需求的接口。</p>
+<h2 id="bff依赖的框架">BFF依赖的框架</h2>
+<h3 id="rest框架">rest框架</h3>
+
+
+
+
+
+
+
+<div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 861px">
+	<img class="card-img-top" src="/docs/overview/rest_huc19fb7fe941f4b89b8278a6cd9b25120_209970_900x600_fit_catmullrom_3.png" width="851" height="378">
+	
+	<div class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+</p>
+	</div>
+	
+</div>
+<h3 id="组件关系">组件关系</h3>
+
+
+
+
+
+
+
+<div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 606px">
+	<img class="card-img-top" src="/docs/overview/layers_hu179965bc5be89de26528ccc8ea86dfd6_41860_900x600_fit_catmullrom_3.png" width="596" height="351">
+	
+	<div class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+</p>
+	</div>
+	
+</div>
+<p>更多web框架信息参考：https://git.cloud.top/go/go-zero/-/wikis/home</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-cc95ce7cb0520bd4840422aea2ba01d5">1.1 - 在资源池运营管理平台中的应用</h1>
+    
+	<h2 id="运营和控制台">运营和控制台</h2>
+<p>在BFF的设计中，BFF是和管理系统一对一的。一个BFF只能服务于一个管理系统，因为BFF中有用户管理、系统配置、权限认证，当一个BFF服务于多个管理系统时数据会混在一起，导致系统不可用。</p>
+<p>在运营管理平台中有个比较特殊的情况，它有控制台。运营9443，控制台443，它们两个是独立的界面。并且控制台是为租户提供的，它的认证系统权限等和运营管理平台不一样。根据我们以往的开发经验（v1开发经验），我们把运营和控制台看成一个系统，当我们提到运营时，一般默认附带着包含控制台。而且v1版运营和控制台所有数据都是共享的，数据库是共享的，甚至前端的配置文件都挂载的同一个目录。</p>
+<p>这在使用BFF的时候会遇到一个小问题，BFF的思想是抽离、独立、公用。在实际使用中会涉及到数据交叉问题，控制台怎么和BFF结合，控制台的租户的token怎么生成，BFF怎么进行租户认证，BFF里面包含系统配置那怎么在运营管理平台同时修改运营和控制台的配置。</p>
+<h2 id="bff和运营">BFF和运营</h2>
+
+
+
+
+
+
+
+<div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 468px">
+	<img class="card-img-top" src="/docs/overview/usage/%E6%8E%A7%E5%88%B6%E5%8F%B0%E4%B8%8EBFF_hu1c41f023156aa8cae868d651d26ed4e4_37217_500x500_fit_catmullrom_3.png" width="458" height="384">
+	
+	<div class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+</p>
+	</div>
+	
+</div>
+<p>如上图，在实际运行的时候存在两个BFF，一个是运营BFF，一个是控制台BFF。这解决了一个BFF不能服务于多个管理系统的问题。并且这两个BFF使用不同的数据库，数据不会混杂。</p>
+<p>运营和控制台通过内部RPC接口与BFF进行交互。RPC接口功能包括：用户管理、系统配置、消息推送等。</p>
+<h3 id="打包">打包</h3>
+<p>上图中存在两个BFF，运营BFF和控制台BFF。两个BFF通过挂载不同的配置文件进行区分，这不能避免因人为失误配置文件挂反了导致服务异常的问题。</p>
+<p>为此，运营控制台使用BFF时应定制BFF镜像。参考：<a href="./%E5%9F%BA%E4%BA%8EBFF%E9%95%9C%E5%83%8F%E5%AE%9A%E5%88%B6%E4%BA%A7%E5%93%81%E4%BE%A7BFF%E9%95%9C%E5%83%8F">基于BFF镜像定制产品侧BFF镜像-定制BFF</a></p>
+<h3 id="控制台租户认证">控制台租户认证</h3>
+<p>为了统一使用BFF进行登陆认证，用户配置。在控制台BFF使用场景中，需要将租户信息导入控制台BFF。</p>
+<p>控制台的租户来源分几类：</p>
+<ul>
+<li>在运营租户管理添加租户： 这种运营后台API调用控制台BFF RPC，将租户信息同步给控制台BFF。</li>
+<li>在控制台界面添加子用户： 这种控制台后台API调用控制台BFF RPC，将子用户信息同步给控制台BFF。</li>
+<li>在运营租户管理导入租户：这种运营后台API调用控制台BFF RPC，将租户信息同步给控制台BFF。</li>
+</ul>
+<p>在将租户信息导入控制台BFF后，所有BFF功能就可用了。</p>
+<h4 id="租户">租户</h4>
+<p>我们说租户登陆控制台，租户怎么使用BFF登陆，租户怎么怎么样，其实没有这问题。</p>
+<p>首先租户这个概念，只有从研发角度，产品角度，或者运营管理平台管理员角度，才有租户这个东西。如果从安全服务最终使用者的角度，没有租户这个概念。比如我登陆控制台访问我的安全服务，我不认为我是租户，孙子才是租户，我是用户。</p>
+<p>同理，站在BFF的角度来说，BFF管理的就是用户，来我这儿登陆的就是我的用户，我只对我的用户负责。访问运营BFF的是运营的用户，访问控制台BFF的是控制台的用户。没有什么租户，租户是什么我不知道。如果要使用，必须把用户信息同步给我。至于同步过来的信息之前是什么玩意儿，和我没关系，我不关心。</p>
+<h3 id="运营系统配置">运营系统配置</h3>
+<p>BFF里面包含一些基本的系统配置，比如：系统信息、验证码等，并且这些都有对应的API接口。但是运营管理平台有个比较特殊的地方，有几个地方可以同时修改运营和控制台的配置。这种情况可以这样：</p>
+<p>运营自己实现接口。Logic里面运营的配置调用运营BFF RPC，控制台的配置调用控制台BFF RPC。这样配置才会生效。</p>
+<p>这种情况把BFF看成数据库吧，看成通过RPC存库就行。</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-75d992297341a7f1e4f144c03129e75b">2 - 使用说明</h1>
+    <div class="lead">使用BFF的方法和准备工作</div>
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-ff7a5a7a41228353ddecb8ac072de5d3">2.1 - 基于BFF镜像定制产品侧BFF镜像</h1>
+    
+	<h1 id="基于bff镜像定制产品侧bff镜像">基于BFF镜像定制产品侧BFF镜像</h1>
+<p>BFF是通用的，它里面包含一份基础的配置文件。当产品侧使用BFF的时候，可以基于BFF基础镜像，编译属于产品的特有的BFF。</p>
+<h2 id="bff镜像">BFF镜像</h2>
+<p>BFF镜像是: docker-hub.cloud.top/cbb/bff:dev</p>
+<p>它的工作目录是 <code>/app</code> ，该目录下包含执行文件<code>bff</code>和配置文件目录<code>etc</code>。</p>
+<p>etc目录下目录结构为:</p>
+<pre tabindex="0"><code>/app $: tree etc
+etc
+├── config-map
+│   └── permission           # 权限配置文件目录
+│       ├── menu.json        #前端菜单配置文件
+│       └── rbac_model.conf  # casbin规则
+├── i18n                     # 翻译文件
+│   ├── en-US.all.json
+├── rest-api.yaml            # 配置文件
+├── ssl                      # https证书
+│   ├── rest-api.crt
+│   └── rest-api.key
+└── waf                      # waf规则文件
+</code></pre><h2 id="直接使用">直接使用</h2>
+<p>如上，产品侧可以直接使用BFF镜像，只需要在运行是挂载一下必要的配置文件, 一般需要挂载：<code>rest-api.yaml</code> <code>menu.json</code> <code>ssl</code></p>
+<p>这种情况下如果产品内部使用了多个BFF，配置文件挂在混了可能导致意外事情发生。</p>
+<h2 id="定制bff">定制BFF</h2>
+<p>产品侧可以基于BFF镜像，定制属于产品自己的BFF。定制BFF只需修改里面的默认配置文件，使产品侧BFF镜像默认包含产品的配置。</p>
+<h3 id="dockerfile">Dockerfile</h3>
+<p>产品侧定制BFF时Dockerfile参考下面：</p>
+<pre tabindex="0"><code>FROM docker-hub.cloud.top/cbb/bff:dev
+
+WORKDIR /app
+COPY etc /app/etc
+EXPOSE 443 8080
+
+CMD [&#34;./bff&#34;, &#34;-f&#34;, &#34;/app/etc/rest-api.yaml&#34;]
+</code></pre><p>如上，主要是拷贝了etc下面的配置文件。etc下面的目录结构按上节中的创建，COPY时如果BFF已经存在对应的文件，则会覆盖原文件。</p>
+<h3 id="定制rest-apiyaml">定制rest-api.yaml</h3>
+<p>下面主要列出了需要修改的字段：</p>
+<pre tabindex="0"><code># bff rpc服务名称
+# 建议必须改
+# 当使用服务发现时会用到这个名称作为rpc服务的名称，如果不改多个产品侧BFF服务同时存在时会出问题。
+# 最好使用service名称+.rpc （service是docker-compose中的links名称，或k8s中的service名称）
+rpc_name: soc.rpc 
+
+# 服务端口
+port: &#39;9443&#39;
+
+# 建议必须改
+certfile: ./etc/ssl/rest-api.crt
+keyfile: ./etc/ssl/rest-api.key
+
+services:
+  mongodb:
+    url: mongodb://mongo.topsec:27017
+    # 建议必须改。
+    db: bff_soc
+  redis:
+    url: redis.topsec:6379
+  clickhouse:
+    url: clickhouse.topsec:9000
+    # 建议必须改。
+    db: devops_logs
+    username: default
+    password:
+
+middlewares:
+  auth:
+    enable: true
+    # 建议必须改。和token签名有关系。
+    secret_key: &#39;q4gMYQtRH9bwr73fSOXp9SVJUnYixUufY9uiedBxC8XAQqz0&#39;
+</code></pre><h3 id="定制权限配置文件">定制权限配置文件</h3>
+<p>权限配置文件在<code>etc/config-map/permission</code>下面，由于不同产品，菜单不一样，每个菜单调用的url也不一样，所以这下面两个文件应该是产品侧提供的。</p>
+<p>定制BFF时，可以默认编译到定制BFF镜像里面，避免每次挂载。</p>
+<h3 id="定制ssl文件">定制ssl文件</h3>
+<p>各产品应该使用自己的https证书文件，不要使用默认的。</p>
+<h3 id="前端文件">前端文件</h3>
+<p>默认BFF可以提供前端静态资源访问服务，但里面没有前端文件，需要运行时挂载。在定制BFF时，可以将前端资源文件编译进BFF。</p>
+<p>需要将前端文件放到<code>/srv/www/dist</code>目录下。</p>
+<h3 id="定制初始化数据">定制初始化数据</h3>
+<p>每个产品的初始化数据都是不一样的，可以参考BFF中的初始化脚本写产品自身的初始化数据方法：
+<a href="https://git.cloud.top/cloud/BFF/-/tree/master/rest/shells/init">https://git.cloud.top/cloud/BFF/-/tree/master/rest/shells/init</a></p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-51459a0616fc8b9b2f5bcaa3d6870b55">2.2 - 初始化数据</h1>
+    
+	<h3 id="初始化脚本的使用方法">初始化脚本的使用方法</h3>
+<ul>
+<li>可以使用init_env -h 查看初始化脚本的使用说明</li>
+</ul>
+
+
+
+
+
+
+
+<div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/usage/initdata/init1_hu1a1b58b320205f51e85f1484d62ec4ed_138965_900x900_fit_catmullrom_3.png" width="900" height="237">
+	
+	<div class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+</p>
+	</div>
+	
+</div>
+<ul>
+<li>
+<p>这个脚本接收四个参数分别是 -f -resource -dir -mode</p>
+</li>
+<li>
+<p>-f 指定配置文件，初始化数据的数据库名，表名等都在配置文件中配置</p>
+</li>
+<li>
+<p>-resource 指定模块，可选模块在配置中有详细列举，此为必选项，且无默认值，如果不带此参数将不会执行任何mongo数据库的初始化</p>
+</li>
+<li>
+<p>-dir 是指定要使用的数据所在的目录（文件夹）</p>
+</li>
+<li>
+<p>-mode 是模式，目前支持cover模式和uncover模式，cover模式将抹去以前的数据重新插入，uncover模式，如果表已经存在将会略过</p>
+</li>
+<li>
+<p>正确执行如图</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+<div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/usage/initdata/init2_hue65d56c23ea0de7b59c31361058e42a7_117161_900x900_fit_catmullrom_3.png" width="900" height="71">
+	
+	<div class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+</p>
+	</div>
+	
+</div>
+<ul>
+<li>会显示___Init Done___</li>
+</ul>
+<h3 id="初始化数据文件的格式">初始化数据文件的格式</h3>
+<ul>
+<li>这是全部初始化数据文件</li>
+</ul>
+
+
+
+
+
+
+
+<div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 532px">
+	<img class="card-img-top" src="/docs/usage/initdata/init3_hu5640f09fe118cb1e448da914664630ea_493080_900x900_fit_catmullrom_3.png" width="522" height="900">
+	
+	<div class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+</p>
+	</div>
+	
+</div>
+<ul>
+<li>每个文件名和配置文件中相应的表名保持一致</li>
+<li>这是每个文件里面的数据格式:
+
+
+
+
+
+
+
+<div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/usage/initdata/init4_hu0fd4bdc29ce1673c4cd0636ecf5c451c_76592_900x900_fit_catmullrom_3.png" width="900" height="361">
+	
+	<div class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+</p>
+	</div>
+	
+</div></li>
+<li>注意它必须是一个正确的json文件，并且必须是一个数组。从mongo中直接导出的数据需要看一看是否符合标准。</li>
+<li>注意mongo的object id的写法，如上图</li>
+<li>注意不需要有createAt updateAt</li>
+</ul>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-e7355f2b93033080d0bf53d7e3e47ea1">2.2.1 - 初始化数据字段说明</h1>
+    
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-57cad078b85dc1eaa34a2fadfa5a0d41">2.2.2 - 初始化数据修改记录</h1>
+    
+	<h2 id="初始化数据更新记录">初始化数据更新记录</h2>
+<ul>
+<li>随着功能的开发，初始化数据有可能会有更新，现在这里记录一下，以防自己和使用者忘记或者对不上</li>
+</ul>
+<h3 id="10月19日更新">10月19日更新</h3>
+<ul>
+<li>功能: 增加用户锁定功能，ip锁定和用户锁定可以并行</li>
+<li>bff_system_config文件，desc为&quot;web访问控制&quot;的数据,data字段下新增一个字段,示例:</li>
+</ul>
+<pre tabindex="0"><code>{
+    &#34;_id&#34;: { &#34;$oid&#34;: &#34;63282f68277834fefd3a66f9&#34; },
+    &#34;name&#34;: &#34;AuthConfig&#34;,
+    &#34;desc&#34;: &#34;web访问控制&#34;,
+    &#34;data&#34;: {
+      &#34;lock_mins&#34;: 10,
+      &#34;max_retries&#34;: 10,
+      &#34;timeout_mins&#34;: 10,
+      &#34;lock_types&#34;: [&#34;ip&#34;]
+    }
+  },
+</code></pre><ul>
+<li>可选值为ip 和 user， 默认有ip 就可以.</li>
+</ul>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-b023065966ab1987bd29973b5b1011ce">3 - 模块</h1>
+    <div class="lead">BFF中的内置模块及其设计</div>
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-aaed92e298af16dfe2adff15eca64484">3.1 - 操作日志</h1>
+    
+	<p>当使用BFF时，操作日志统一由BFF记录，并由BFF提供操作日志查询接口。</p>
+<p>BFF记录日志和API服务自己记录日志的实现方式是一样的，只不过由BFF记录，可以保证统一性，并且也比较好实现。</p>
+<p>由于BFF记录日志，所有内部API服务中关于日志的i18n翻译文件，需要给BFF一份。可以在部署的时候通过挂载的方式将翻译文件挂载进去。或者API服务启动的时候，调用BFF RPC接口，将i18n文件内容发送给BFF。</p>
+<p>整体实现思路，和以前运营差不多。主要是几个日志中的字段意义需要明确一下。</p>
+<h2 id="操作日志插件使用说明">操作日志插件使用说明</h2>
+<ul>
+<li>目前操作日志支持三种存储方式，分别是clickhouse, mongo 和 文件存储, 需要在配置文件中配置，如下</li>
+</ul>
+<pre tabindex="0"><code>  # 打印请求日志
+  logger:
+    enable: true
+    type: clickhouse
+</code></pre><ul>
+<li>其中type代表存储方式，可选值为：clickhouse, mongo, file</li>
+<li>三种存储方式对外表现完全一致，使用者不需要考虑针对某一种存储方式做特定操作</li>
+<li>如果在logic 里需要使用操作日志resource,比如读取（一般情况不需要），应该如下:</li>
+</ul>
+<pre tabindex="0"><code>l.svcCtx.ApiLog.Default.Read(conditions)
+</code></pre><p>只需要使用Default即可</p>
+<h2 id="添加日志详情的方法1">添加日志详情的方法1</h2>
+<p>不管是BFF还是其它api服务，方法是一样的：</p>
+<p>首先更新<code>go-zero v1.4.3+</code> <code>goctl tools/goctl/v1.4.1-20220908</code></p>
+<h3 id="logic里面">logic里面</h3>
+<p>因为一般逻辑处理在logic里面，go-zero v1.4.3增加了在logic里面记录日志详情的方法:</p>
+<pre tabindex="0"><code>l.syslog(id, data)
+</code></pre><h3 id="handler里面">handler里面</h3>
+<p>在handler里面可以使用</p>
+<pre tabindex="0"><code>&#34;git.cloud.top/go/go-zero/rest/echo/logger&#34;
+
+logger.SetSyslog(c, syslog)
+</code></pre><p><strong>上面两个地方添加的日志效果一样，选一个地方填加就行。</strong></p>
+<p><strong>api服务调用上面方法自定义日志详情后，框架会把这两个值传给BFF，并放到BFF的rest.Context中。所以两边使用起来都和操作本地数据一样。</strong></p>
+<p><strong>在使用BFF的情况下，类似<code>/from/:name</code>这种路由，由于是在产品侧api中注册的，BFF中没有路由信息，所以BFF获取的Path是<code>/from/具体值</code>，导致BFF翻译出问题。<code>go-zero v1.4.5</code>修改了该问题。（注意handler中要有<code>logger.BindSyslog(c, l.Context())</code>）</strong></p>
+<h2 id="添加日志详情的方法2">添加日志详情的方法2</h2>
+<p>根据响应信息，渲染日志详情。(TODO)</p>
+<h2 id="操作日志部分字段说明">操作日志部分字段说明</h2>
+<h3 id="username">username</h3>
+<p>用户名。<strong>注：查询的时候不要返回匿名用户的日志。</strong></p>
+<p>另外日志中如果有过多的匿名用户的日志，需要思考日志记得对不对。</p>
+<h3 id="menu">menu</h3>
+<p>前端菜单，表示这个请求是由哪个菜单发起的。</p>
+<p>可以对应日志界面的<code>操作对象</code>列, 翻译由前端负责。</p>
+<h3 id="level">level</h3>
+<p>日志级别。</p>
+<ul>
+<li>信息： 20x</li>
+<li>警告: 600</li>
+<li>错误: 40x</li>
+<li>严重错误: 50x</li>
+</ul>
+<p><strong>这里有个需求：造某个级别的日志，测评的时候可能会遇到。需要整理一下访问哪个页面，做什么操作会触发对应的日志。</strong></p>
+<h3 id="success">success</h3>
+<p>是否成功。20x成功，否则失败。</p>
+<h3 id="time">time</h3>
+<p>本地时间，时间戳。</p>
+<h3 id="content">content</h3>
+<p>这个字段可以表示日志内容或详情，前端只需要显示就行。日志内容不够详细，后端负责优化。</p>
+<h4 id="后端日志content计算方法">后端日志content计算方法</h4>
+<pre tabindex="0"><code>if syslogid 非空:
+    logid = syslogid
+else:
+    logid= method+path
+
+content = i18n(logid, detail)
+</code></pre><p>当一个api接口通过<code>method + path</code>翻译不能满足需求时，可以自定义翻译id <code>syslog_id</code>。</p>
+<p>如上，<code>syslog_id</code>非空时，日志的id为<code>syslog_id</code>，否则为默认的<code>method + path</code>。</p>
+<p>content为日志id经i18n翻译后的内容。</p>
+<p>这里的detail是日志中翻译模板中可能用到的值。</p>
+<p>使用<code>syslog_id</code> 的情况例子:</p>
+<pre tabindex="0"><code>// i18n翻译文件
+[
+  {
+          &#34;id&#34;: &#34;helloName&#34;,
+          &#34;translation&#34;:&#34;你好 {{.Name}}&#34;
+  }
+]
+
+
+// handler里面写日志详情
+logger.SetSysLogID(c, &#34;helloName&#34;)
+logger.Detail(c, &#39;{&#34;Name&#34;: &#34;zhangsan&#34;}&#39;)
+
+// 翻译
+T(ctx, syslog_id, detail)
+</code></pre><p>使用<code>syslog_id</code> 的情况例子2:</p>
+<pre tabindex="0"><code>// i18n翻译文件
+[
+  {
+          &#34;id&#34;: &#34;helloName&#34;,
+          &#34;translation&#34;:&#34;你好&#34;
+  }
+]
+
+
+// handler里面写日志详情
+logger.SetSysLogID(c, &#34;helloName&#34;)
+
+// 翻译
+T(ctx, syslog_id)
+</code></pre><p>使用<code>method + path</code> 的情况例子:</p>
+<pre tabindex="0"><code>// i18n翻译文件
+[
+  {
+          &#34;id&#34;: &#34;GET /api/v2/hello&#34;,
+          &#34;translation&#34;:&#34;你好 {{.Name}}&#34;
+  }
+]
+
+// handler里面写日志详情
+logger.Detail(c, &#39;{&#34;Name&#34;: &#34;zhangsan&#34;}&#39;)
+
+// 翻译
+T(ctx, &#34;GET /api/v2/hello&#34;, detail)
+</code></pre><p>使用<code>method + path</code> 的情况例子2:</p>
+<pre tabindex="0"><code>// i18n翻译文件
+[
+  {
+          &#34;id&#34;: &#34;GET /api/v2/hello&#34;,
+          &#34;translation&#34;:&#34;你好&#34;
+  }
+]
+
+// 翻译
+T(ctx, &#34;GET /api/v2/hello&#34;)
+</code></pre><h3 id="detail">detail</h3>
+<p>detail为翻译模板中的参数提供实际值。参考上节。</p>
+<p>这里建议detail只用作上面一种用途。不要干其它的。</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-fad3c48d9b9cb8456e64fd6c4716e8f1">3.2 - 权限管理</h1>
+    
+	<h3 id="鉴权流程">鉴权流程</h3>
+
+
+
+
+
+
+
+<div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 644px">
+	<img class="card-img-top" src="/docs/modules/permission/permission6_hufdad2e5284741a0b13c7cd3c7f792a45_229633_900x900_fit_catmullrom_3.png" width="634" height="900">
+	
+	<div class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+</p>
+	</div>
+	
+</div>
+<h3 id="鉴权流程解释">鉴权流程解释</h3>
+<ul>
+<li>请求进来先通过jwt中间件，过了之后可以从context中拿到用户名, 进而从如下两方面进行了判断:</li>
+<li>一个是判断该用户拥有的menu_id是否和传过来的menu_link相吻合。这个是通过req header中的menu_link来判断。</li>
+<li>第二个判断该用户是否有访问某一条路由的权限。</li>
+</ul>
+<h4 id="menu菜单是什么从哪里来">menu(菜单)是什么，从哪里来</h4>
+<ul>
+<li>菜单和menu ID, 由前端提供一个menu.json文件，文件示例如下:</li>
+</ul>
+<pre tabindex="0"><code>[
+  {
+    &#34;text&#34;: &#34;主导航&#34;,
+    &#34;i18n&#34;: &#34;menu.main&#34;,
+    &#34;group&#34;: true,
+    &#34;hideInBreadcrumb&#34;: true,
+    &#34;children&#34;: [
+      {
+        &#34;text&#34;: &#34;tenant_manage&#34;,
+        &#34;i18n&#34;: &#34;menu.tenant_manage&#34;,
+        &#34;icon&#34;: &#34;anticon antanticon anticon-team&#34;,
+        &#34;readOnly&#34;: false,
+        &#34;disabled&#34;: false,
+        &#34;id&#34;: 1,
+        &#34;children&#34;: [
+          {
+            &#34;text&#34;: &#34;tenant_manage&#34;,
+            &#34;link&#34;: &#34;/user-center/tenant-manage&#34;,
+            &#34;i18n&#34;: &#34;menu.tenant_manage&#34;,
+            &#34;readOnly&#34;: false,
+            &#34;disabled&#34;: false,
+            &#34;id&#34;: 11
+          }
+        ]
+      }
+    ]
+  }
+]
+</code></pre><ul>
+<li>文件说明: 这个文件是全部前端可以展示的菜单，菜单是一个树状结构。</li>
+<li>字段说明：</li>
+<li>id：menu id, 此id 唯一；</li>
+<li>link： menu_link，请求的时候需要放在req header中。</li>
+<li>disable：此菜单节点是否可用</li>
+<li>readonly: 此菜单节点是否可读写还是只读</li>
+</ul>
+<h4 id="用户角色和权限或者说菜单的对应关系">用户、角色、和权限(或者说菜单)的对应关系</h4>
+<ul>
+<li>用户表里有一个role_name字段对应角色表里的role</li>
+<li>role表里有一个permissions的字段，是一个数组，对应多个permission, 如下:</li>
+</ul>
+<pre tabindex="0"><code>{ 
+    &#34;role_name&#34; : &#34;dfwer&#34;, 
+    &#34;role_type&#34; : &#34;custom&#34;, 
+    &#34;role_desc&#34; : &#34;&#34;, 
+    &#34;mode&#34; : &#34;&#34;, 
+    &#34;client_id&#34; : &#34;&#34;, 
+    &#34;permissions&#34; : [
+        &#34;10&#34;, 
+        &#34;110&#34;, 
+        &#34;120&#34;, 
+        &#34;130&#34;, 
+        &#34;140&#34;
+    ]
+}
+</code></pre><ul>
+<li>permissions 里的元素是 menu id + &ldquo;0&rdquo; 或者 menu id + &ldquo;1&rdquo;, 0代表只读，1代表可读写</li>
+</ul>
+<h4 id="怎么判断用户是否具有某一条路由的权限">怎么判断用户是否具有某一条路由的权限</h4>
+<ul>
+<li>从上下文里拿到这条请求的路径，和请求方法(GET PUT DELETE POST)，用户名，通过用户名查到该用户的角色, 然后去查该角色是否有这条路由的权限。</li>
+<li>目前是借由casbin实现的，从目前的复杂度来看，其实不用casbin也可以，casbin最适用的场景是角色树，比如租户有子租户的全部权限，子租户还有子租户，疯狂嵌套类似这种。</li>
+</ul>
+<h3 id="当开发了新功能模块时开发人员需要做哪些工作">当开发了新功能模块时，开发人员需要做哪些工作</h3>
+<ul>
+<li>menu.json, 只需要维护这个文件。</li>
+</ul>
+<h3 id="10月11日更新">10月11日更新</h3>
+<h3 id="优化使用者-更新权限时流程过于复杂的问题">优化使用者 更新权限时，流程过于复杂的问题</h3>
+<h5 id="说明">说明</h5>
+<ul>
+<li>目前使用者更新权限，需要更新menu.json, permission.json, bff_user_role和 bff_user_role_t 四个文件，并且执行初始化程序，才能够正常更新权限模块。</li>
+<li>改版后，使用者只需要维护menu.json 和permission.json两个文件，并且不用执行初始化程序</li>
+<li>新增的这个功能也是函数式的，以后可以根据需要来决定是否使用(目前直接使用)</li>
+</ul>
+<h5 id="menujson变动">menu.json变动</h5>
+<ul>
+<li>menu.json增加字段owner , 如下:</li>
+</ul>
+<pre tabindex="0"><code>{
+     &#34;id&#34;: &#34;2&#34;,
+     &#34;text&#34;: &#34;订单管理&#34;,
+     &#34;i18n&#34;: &#34;menu.order_management&#34;,
+     &#34;icon&#34;: &#34;anticon antanticon anticon-file-done&#34;,
+     &#34;link&#34;: &#34;/customer/order&#34;,
+     &#34;owner&#34;: [&#34;role_security&#34;]
+}
+</code></pre><ul>
+<li>owner为拥有该菜单(权限)的角色，这个角色可以是预置角色，也可以不是（一般情况更新预置角色即可），只要是当前数据库里角色表里存在的角色都会更新</li>
+<li>超级管理员不用写，自动拥有全部权限，超管的角色名是role_admin 这个是固定的。</li>
+<li>如果menu.json没有出现的角色不会作任何更改，出现了的角色，会全量更新，即只要是出现了的角色，menu.json里必须保证此角色在所有应该存在的menu节点下存在。</li>
+<li>权限的更新时机是启动服务和切换三权超管时，不用再执行初始化程序。</li>
+</ul>
+<h3 id="10月17日更新">10月17日更新</h3>
+<h3 id="删除permissionjson文件合并至menujson">删除permission.json文件，合并至menu.json</h3>
+<h4 id="说明-1">说明</h4>
+<ul>
+<li>两个配置文件合并，现在一个完整的menu.json中的节点示例如下:</li>
+</ul>
+<pre tabindex="0"><code>{
+        &#34;id&#34;: &#34;1&#34;,
+        &#34;text&#34;: &#34;测试菜单&#34;,
+        &#34;i18n&#34;: &#34;menu.equipment_monitor&#34;,
+        &#34;icon&#34;: &#34;anticon antanticon anticon-compass&#34;,
+        &#34;owner&#34;: [&#34;role_security&#34;],
+        &#34;readOnly&#34;: false,
+        &#34;disabled&#34;: false,
+        &#34;hide&#34;: false,
+        &#34;paths&#34;: [&#34;/api/v2/monitor/overview*&#34;,&#34;/api/v2/monitor/device_instance*&#34;],
+        &#34;skipper&#34;: [&#34;/api/v2/monitor/overview/test&#34;],
+        &#34;children&#34;: []
+}
+</code></pre><h4 id="字段说明">字段说明</h4>
+<ul>
+<li>id: menu id，必须有，如果没有,此节点包括其子节点都不会有任何作用, 类型是字符串，可以以0开头</li>
+<li>i18n: 节点名称, icon: 图标, text: 中文名称, hide: 是否隐藏, disable: 是否作废. 这几个是给前端显示用的.</li>
+<li>readOnly: 只读还是可读写</li>
+<li>owner: 权限拥有者，见上文</li>
+<li>paths: 这个菜单下面的所有可访问路径，代替之前的permission.json</li>
+<li>skipper: 这个菜单下面的所有可跳过路径，代替之前的permission.json(实际上不是这个菜单下的也可)</li>
+<li>children: 子节点，这是一棵树，可以有无穷多级</li>
+</ul>
+<h5 id="凡是不在此列出的字段都是无效的">凡是不在此列出的字段都是无效的</h5>
+<h5 id="删除此文档所有和permissionjson-相关的内容以后只维护一个menujson">删除此文档所有和permission.json 相关的内容，以后只维护一个menu.json</h5>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-49e0b16c20586754c90904a00672bdf3">3.3 - 消息中心</h1>
+    
+	<h2 id="流程简述">流程简述</h2>
+<ul>
+<li>web前端通过websocket连接服务端，服务端维持这个连接，直到客户端断开，或者认证过期。</li>
+<li>建立连接后，服务端会首先下发一次消息中心统计数据，之后在每次消息中心数据有更新后，都会下发所有客户端一次统计数据。</li>
+<li>消息生产者可以通过http和rpc发送消息的api，定向发给某一个或某一组客户端消息</li>
+<li>发送消息必须通过消息模版, 消息模版下面有说明。</li>
+</ul>
+<h2 id="其他服务和消息中心的交互">其他服务和消息中心的交互</h2>
+<ol>
+<li>客户端, 客户端通过/ws 接口建立websocket连接</li>
+<li>消息生产者, 通过rpc或者http接口发送消息</li>
+</ol>
+<h2 id="消息中心模型">消息中心模型</h2>
+
+
+
+
+
+
+
+<div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 910px">
+	<img class="card-img-top" src="/docs/modules/message/message2_hu65941fdfed2cda8148d3fda572514bad_44721_900x900_fit_q75_catmullrom.jpeg" width="900" height="469">
+	
+	<div class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+</p>
+	</div>
+	
+</div>
+<h2 id="模型说明">模型说明</h2>
+<ul>
+<li>当message资源加载时，启动一个hub, 这个hub相当于是所有client的管理者，它负责所有client的连接和断开，如果有client要广播，也需要通过hub，hub上的属性如下:</li>
+</ul>
+<pre tabindex="0"><code>type Hub struct {
+	clients map[*Client]bool
+
+	broadcast chan broadcastInfo
+
+	register chan *Client
+
+	unregister chan *Client
+
+	registerHandler   func(*Client) error
+	unregisterHandler func(*Client) error
+}
+</code></pre><ul>
+<li>当有web客户端来通过websocket来连接服务器，我们会生成一个client，并且在hub上注册，这个client上包含这个connection的所有信息，也就是说和客户端的通讯要靠这个client，client属性如下</li>
+</ul>
+<pre tabindex="0"><code>type Client struct {
+	Id       string
+	UserName string
+	RealIp   string
+	Groups   []string
+
+	conn *websocket.Conn
+
+	send   chan []byte
+	cancel chan bool
+}
+</code></pre><h2 id="消息模版说明">消息模版说明</h2>
+<ul>
+<li>消息模版使用go template模版语法, 示例如下:</li>
+</ul>
+<pre tabindex="0"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;en&#34;&gt;
+&lt;head&gt;
+    &lt;meta charset=&#34;UTF-8&#34;&gt;
+    &lt;title&gt;{{.title}}&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;  尊敬的用户{{.username}}:&lt;/p&gt;
+ &lt;p class=&#34;text-indent&#34;&gt;{{.description}}, 请及时处理&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><ul>
+<li>发送消息时候指定模版id和其中字段，如上title和username</li>
+</ul>
+<h2 id="跨服务通信支持">跨服务通信支持</h2>
+<ul>
+<li>消息中心服务支持在本服务注册的客户端的通信，即, 在目前bff和后台服务一对一的模式下，目前消息中心支持本后台服务的消息通讯。</li>
+<li>如果需要往其他服务的消息中心客户端，需要走rpc接口，发送消息</li>
+</ul>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-c41cb405ac91671df05dd6d78a5d47dc">4 - 测试与发布</h1>
+    <div class="lead">测试与发布 相关技术文档</div>
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-956e67d93f8e9469204a17fb4f51e6eb">4.1 - 自动化测试</h1>
+    
+	<h2 id="单元测试">单元测试</h2>
+<p>单元测试的范围：<code>resources</code>、<code>logic</code>、<code>utility</code>、<code>pkg</code></p>
+<p>单元测试方法参考： <a href="https://doc.repo.cloud.io/TEST/APITEST/testing/index.html#">https://doc.repo.cloud.io/TEST/APITEST/testing/index.html#</a></p>
+<p>单元测试需要连接几个服务，服务的地址不要写内部IP，可以写：</p>
+<ul>
+<li><code>mongo.cloud.top</code></li>
+<li><code>redis.cloud.top</code></li>
+<li><code>clickhouse.cloud.top</code></li>
+</ul>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-a89a4202241db29d9eb8a56f86eef85f">4.2 - 平滑升级方案</h1>
+    
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-56f1c8461768da20a6a7f6c845de41d6">4.3 - 版本说明</h1>
+    
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+
+    
+	
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="User mailing list" aria-label="User mailing list">
+    <a class="text-white" target="_blank" rel="noopener" href="https://example.org/mail" aria-label="User mailing list">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Twitter" aria-label="Twitter">
+    <a class="text-white" target="_blank" rel="noopener" href="https://example.org/twitter" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Stack Overflow" aria-label="Stack Overflow">
+    <a class="text-white" target="_blank" rel="noopener" href="https://example.org/stack" aria-label="Stack Overflow">
+      <i class="fab fa-stack-overflow"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitHub" aria-label="GitHub">
+    <a class="text-white" target="_blank" rel="noopener" href="https://github.com/google/docsy" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Slack" aria-label="Slack">
+    <a class="text-white" target="_blank" rel="noopener" href="https://example.org/slack" aria-label="Slack">
+      <i class="fab fa-slack"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Developer mailing list" aria-label="Developer mailing list">
+    <a class="text-white" target="_blank" rel="noopener" href="https://example.org/mail" aria-label="Developer mailing list">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2022 The Docsy Authors </small>
+        <small class="ml-1"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener"></a></small>
+	
+		<p class="mt-2"><a href="/about/">关于BFF</a></p>
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+    integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+<script src='/js/tabpane-persist.js'></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.fd403a22f61652bb1fa2f3ede37f66e79e05c459b4e8bba59b1c467ef197a38c.js" integrity="sha256-/UA6IvYWUrsfovPt439m554FxFm06LulmxxGfvGXo4w=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>

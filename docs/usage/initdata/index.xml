@@ -1,0 +1,66 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BFF – 初始化数据</title>
+    <link>http://bff.github.io/docs/usage/initdata/</link>
+    <description>Recent content in 初始化数据 on BFF</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="http://bff.github.io/docs/usage/initdata/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: 初始化数据字段说明</title>
+      <link>http://bff.github.io/docs/usage/initdata/explaination/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://bff.github.io/docs/usage/initdata/explaination/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 初始化数据修改记录</title>
+      <link>http://bff.github.io/docs/usage/initdata/updaterecord/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://bff.github.io/docs/usage/initdata/updaterecord/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;初始化数据更新记录&#34;&gt;初始化数据更新记录&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;随着功能的开发，初始化数据有可能会有更新，现在这里记录一下，以防自己和使用者忘记或者对不上&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;10月19日更新&#34;&gt;10月19日更新&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;功能: 增加用户锁定功能，ip锁定和用户锁定可以并行&lt;/li&gt;
+&lt;li&gt;bff_system_config文件，desc为&amp;quot;web访问控制&amp;quot;的数据,data字段下新增一个字段,示例:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
+    &amp;#34;_id&amp;#34;: { &amp;#34;$oid&amp;#34;: &amp;#34;63282f68277834fefd3a66f9&amp;#34; },
+    &amp;#34;name&amp;#34;: &amp;#34;AuthConfig&amp;#34;,
+    &amp;#34;desc&amp;#34;: &amp;#34;web访问控制&amp;#34;,
+    &amp;#34;data&amp;#34;: {
+      &amp;#34;lock_mins&amp;#34;: 10,
+      &amp;#34;max_retries&amp;#34;: 10,
+      &amp;#34;timeout_mins&amp;#34;: 10,
+      &amp;#34;lock_types&amp;#34;: [&amp;#34;ip&amp;#34;]
+    }
+  },
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;可选值为ip 和 user， 默认有ip 就可以.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

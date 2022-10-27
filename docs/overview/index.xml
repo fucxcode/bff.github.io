@@ -1,0 +1,73 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BFF – 概览</title>
+    <link>http://bff.github.io/docs/overview/</link>
+    <description>Recent content in 概览 on BFF</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="http://bff.github.io/docs/overview/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: 在资源池运营管理平台中的应用</title>
+      <link>http://bff.github.io/docs/overview/usage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://bff.github.io/docs/overview/usage/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;运营和控制台&#34;&gt;运营和控制台&lt;/h2&gt;
+&lt;p&gt;在BFF的设计中，BFF是和管理系统一对一的。一个BFF只能服务于一个管理系统，因为BFF中有用户管理、系统配置、权限认证，当一个BFF服务于多个管理系统时数据会混在一起，导致系统不可用。&lt;/p&gt;
+&lt;p&gt;在运营管理平台中有个比较特殊的情况，它有控制台。运营9443，控制台443，它们两个是独立的界面。并且控制台是为租户提供的，它的认证系统权限等和运营管理平台不一样。根据我们以往的开发经验（v1开发经验），我们把运营和控制台看成一个系统，当我们提到运营时，一般默认附带着包含控制台。而且v1版运营和控制台所有数据都是共享的，数据库是共享的，甚至前端的配置文件都挂载的同一个目录。&lt;/p&gt;
+&lt;p&gt;这在使用BFF的时候会遇到一个小问题，BFF的思想是抽离、独立、公用。在实际使用中会涉及到数据交叉问题，控制台怎么和BFF结合，控制台的租户的token怎么生成，BFF怎么进行租户认证，BFF里面包含系统配置那怎么在运营管理平台同时修改运营和控制台的配置。&lt;/p&gt;
+&lt;h2 id=&#34;bff和运营&#34;&gt;BFF和运营&lt;/h2&gt;
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 468px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;http://bff.github.io/docs/overview/usage/%E6%8E%A7%E5%88%B6%E5%8F%B0%E4%B8%8EBFF_hu1c41f023156aa8cae868d651d26ed4e4_37217_500x500_fit_catmullrom_3.png&#34; width=&#34;458&#34; height=&#34;384&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+&lt;p&gt;如上图，在实际运行的时候存在两个BFF，一个是运营BFF，一个是控制台BFF。这解决了一个BFF不能服务于多个管理系统的问题。并且这两个BFF使用不同的数据库，数据不会混杂。&lt;/p&gt;
+&lt;p&gt;运营和控制台通过内部RPC接口与BFF进行交互。RPC接口功能包括：用户管理、系统配置、消息推送等。&lt;/p&gt;
+&lt;h3 id=&#34;打包&#34;&gt;打包&lt;/h3&gt;
+&lt;p&gt;上图中存在两个BFF，运营BFF和控制台BFF。两个BFF通过挂载不同的配置文件进行区分，这不能避免因人为失误配置文件挂反了导致服务异常的问题。&lt;/p&gt;
+&lt;p&gt;为此，运营控制台使用BFF时应定制BFF镜像。参考：&lt;a href=&#34;./%E5%9F%BA%E4%BA%8EBFF%E9%95%9C%E5%83%8F%E5%AE%9A%E5%88%B6%E4%BA%A7%E5%93%81%E4%BE%A7BFF%E9%95%9C%E5%83%8F&#34;&gt;基于BFF镜像定制产品侧BFF镜像-定制BFF&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;控制台租户认证&#34;&gt;控制台租户认证&lt;/h3&gt;
+&lt;p&gt;为了统一使用BFF进行登陆认证，用户配置。在控制台BFF使用场景中，需要将租户信息导入控制台BFF。&lt;/p&gt;
+&lt;p&gt;控制台的租户来源分几类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在运营租户管理添加租户： 这种运营后台API调用控制台BFF RPC，将租户信息同步给控制台BFF。&lt;/li&gt;
+&lt;li&gt;在控制台界面添加子用户： 这种控制台后台API调用控制台BFF RPC，将子用户信息同步给控制台BFF。&lt;/li&gt;
+&lt;li&gt;在运营租户管理导入租户：这种运营后台API调用控制台BFF RPC，将租户信息同步给控制台BFF。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在将租户信息导入控制台BFF后，所有BFF功能就可用了。&lt;/p&gt;
+&lt;h4 id=&#34;租户&#34;&gt;租户&lt;/h4&gt;
+&lt;p&gt;我们说租户登陆控制台，租户怎么使用BFF登陆，租户怎么怎么样，其实没有这问题。&lt;/p&gt;
+&lt;p&gt;首先租户这个概念，只有从研发角度，产品角度，或者运营管理平台管理员角度，才有租户这个东西。如果从安全服务最终使用者的角度，没有租户这个概念。比如我登陆控制台访问我的安全服务，我不认为我是租户，孙子才是租户，我是用户。&lt;/p&gt;
+&lt;p&gt;同理，站在BFF的角度来说，BFF管理的就是用户，来我这儿登陆的就是我的用户，我只对我的用户负责。访问运营BFF的是运营的用户，访问控制台BFF的是控制台的用户。没有什么租户，租户是什么我不知道。如果要使用，必须把用户信息同步给我。至于同步过来的信息之前是什么玩意儿，和我没关系，我不关心。&lt;/p&gt;
+&lt;h3 id=&#34;运营系统配置&#34;&gt;运营系统配置&lt;/h3&gt;
+&lt;p&gt;BFF里面包含一些基本的系统配置，比如：系统信息、验证码等，并且这些都有对应的API接口。但是运营管理平台有个比较特殊的地方，有几个地方可以同时修改运营和控制台的配置。这种情况可以这样：&lt;/p&gt;
+&lt;p&gt;运营自己实现接口。Logic里面运营的配置调用运营BFF RPC，控制台的配置调用控制台BFF RPC。这样配置才会生效。&lt;/p&gt;
+&lt;p&gt;这种情况把BFF看成数据库吧，看成通过RPC存库就行。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

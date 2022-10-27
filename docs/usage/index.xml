@@ -1,0 +1,224 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BFF – 使用说明</title>
+    <link>http://bff.github.io/docs/usage/</link>
+    <description>Recent content in 使用说明 on BFF</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="http://bff.github.io/docs/usage/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: 基于BFF镜像定制产品侧BFF镜像</title>
+      <link>http://bff.github.io/docs/usage/customized/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://bff.github.io/docs/usage/customized/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;基于bff镜像定制产品侧bff镜像&#34;&gt;基于BFF镜像定制产品侧BFF镜像&lt;/h1&gt;
+&lt;p&gt;BFF是通用的，它里面包含一份基础的配置文件。当产品侧使用BFF的时候，可以基于BFF基础镜像，编译属于产品的特有的BFF。&lt;/p&gt;
+&lt;h2 id=&#34;bff镜像&#34;&gt;BFF镜像&lt;/h2&gt;
+&lt;p&gt;BFF镜像是: docker-hub.cloud.top/cbb/bff:dev&lt;/p&gt;
+&lt;p&gt;它的工作目录是 &lt;code&gt;/app&lt;/code&gt; ，该目录下包含执行文件&lt;code&gt;bff&lt;/code&gt;和配置文件目录&lt;code&gt;etc&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;etc目录下目录结构为:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/app $: tree etc
+etc
+├── config-map
+│   └── permission           # 权限配置文件目录
+│       ├── menu.json        #前端菜单配置文件
+│       └── rbac_model.conf  # casbin规则
+├── i18n                     # 翻译文件
+│   ├── en-US.all.json
+├── rest-api.yaml            # 配置文件
+├── ssl                      # https证书
+│   ├── rest-api.crt
+│   └── rest-api.key
+└── waf                      # waf规则文件
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;直接使用&#34;&gt;直接使用&lt;/h2&gt;
+&lt;p&gt;如上，产品侧可以直接使用BFF镜像，只需要在运行是挂载一下必要的配置文件, 一般需要挂载：&lt;code&gt;rest-api.yaml&lt;/code&gt; &lt;code&gt;menu.json&lt;/code&gt; &lt;code&gt;ssl&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;这种情况下如果产品内部使用了多个BFF，配置文件挂在混了可能导致意外事情发生。&lt;/p&gt;
+&lt;h2 id=&#34;定制bff&#34;&gt;定制BFF&lt;/h2&gt;
+&lt;p&gt;产品侧可以基于BFF镜像，定制属于产品自己的BFF。定制BFF只需修改里面的默认配置文件，使产品侧BFF镜像默认包含产品的配置。&lt;/p&gt;
+&lt;h3 id=&#34;dockerfile&#34;&gt;Dockerfile&lt;/h3&gt;
+&lt;p&gt;产品侧定制BFF时Dockerfile参考下面：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;FROM docker-hub.cloud.top/cbb/bff:dev
+
+WORKDIR /app
+COPY etc /app/etc
+EXPOSE 443 8080
+
+CMD [&amp;#34;./bff&amp;#34;, &amp;#34;-f&amp;#34;, &amp;#34;/app/etc/rest-api.yaml&amp;#34;]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如上，主要是拷贝了etc下面的配置文件。etc下面的目录结构按上节中的创建，COPY时如果BFF已经存在对应的文件，则会覆盖原文件。&lt;/p&gt;
+&lt;h3 id=&#34;定制rest-apiyaml&#34;&gt;定制rest-api.yaml&lt;/h3&gt;
+&lt;p&gt;下面主要列出了需要修改的字段：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# bff rpc服务名称
+# 建议必须改
+# 当使用服务发现时会用到这个名称作为rpc服务的名称，如果不改多个产品侧BFF服务同时存在时会出问题。
+# 最好使用service名称+.rpc （service是docker-compose中的links名称，或k8s中的service名称）
+rpc_name: soc.rpc 
+
+# 服务端口
+port: &amp;#39;9443&amp;#39;
+
+# 建议必须改
+certfile: ./etc/ssl/rest-api.crt
+keyfile: ./etc/ssl/rest-api.key
+
+services:
+  mongodb:
+    url: mongodb://mongo.topsec:27017
+    # 建议必须改。
+    db: bff_soc
+  redis:
+    url: redis.topsec:6379
+  clickhouse:
+    url: clickhouse.topsec:9000
+    # 建议必须改。
+    db: devops_logs
+    username: default
+    password:
+
+middlewares:
+  auth:
+    enable: true
+    # 建议必须改。和token签名有关系。
+    secret_key: &amp;#39;q4gMYQtRH9bwr73fSOXp9SVJUnYixUufY9uiedBxC8XAQqz0&amp;#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;定制权限配置文件&#34;&gt;定制权限配置文件&lt;/h3&gt;
+&lt;p&gt;权限配置文件在&lt;code&gt;etc/config-map/permission&lt;/code&gt;下面，由于不同产品，菜单不一样，每个菜单调用的url也不一样，所以这下面两个文件应该是产品侧提供的。&lt;/p&gt;
+&lt;p&gt;定制BFF时，可以默认编译到定制BFF镜像里面，避免每次挂载。&lt;/p&gt;
+&lt;h3 id=&#34;定制ssl文件&#34;&gt;定制ssl文件&lt;/h3&gt;
+&lt;p&gt;各产品应该使用自己的https证书文件，不要使用默认的。&lt;/p&gt;
+&lt;h3 id=&#34;前端文件&#34;&gt;前端文件&lt;/h3&gt;
+&lt;p&gt;默认BFF可以提供前端静态资源访问服务，但里面没有前端文件，需要运行时挂载。在定制BFF时，可以将前端资源文件编译进BFF。&lt;/p&gt;
+&lt;p&gt;需要将前端文件放到&lt;code&gt;/srv/www/dist&lt;/code&gt;目录下。&lt;/p&gt;
+&lt;h3 id=&#34;定制初始化数据&#34;&gt;定制初始化数据&lt;/h3&gt;
+&lt;p&gt;每个产品的初始化数据都是不一样的，可以参考BFF中的初始化脚本写产品自身的初始化数据方法：
+&lt;a href=&#34;https://git.cloud.top/cloud/BFF/-/tree/master/rest/shells/init&#34;&gt;https://git.cloud.top/cloud/BFF/-/tree/master/rest/shells/init&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 初始化数据</title>
+      <link>http://bff.github.io/docs/usage/initdata/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://bff.github.io/docs/usage/initdata/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;初始化脚本的使用方法&#34;&gt;初始化脚本的使用方法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;可以使用init_env -h 查看初始化脚本的使用说明&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;http://bff.github.io/docs/usage/initdata/init1_hu1a1b58b320205f51e85f1484d62ec4ed_138965_900x900_fit_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;237&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;这个脚本接收四个参数分别是 -f -resource -dir -mode&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-f 指定配置文件，初始化数据的数据库名，表名等都在配置文件中配置&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-resource 指定模块，可选模块在配置中有详细列举，此为必选项，且无默认值，如果不带此参数将不会执行任何mongo数据库的初始化&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-dir 是指定要使用的数据所在的目录（文件夹）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-mode 是模式，目前支持cover模式和uncover模式，cover模式将抹去以前的数据重新插入，uncover模式，如果表已经存在将会略过&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;正确执行如图&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;http://bff.github.io/docs/usage/initdata/init2_hue65d56c23ea0de7b59c31361058e42a7_117161_900x900_fit_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;71&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;会显示___Init Done___&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;初始化数据文件的格式&#34;&gt;初始化数据文件的格式&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;这是全部初始化数据文件&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 532px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;http://bff.github.io/docs/usage/initdata/init3_hu5640f09fe118cb1e448da914664630ea_493080_900x900_fit_catmullrom_3.png&#34; width=&#34;522&#34; height=&#34;900&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;每个文件名和配置文件中相应的表名保持一致&lt;/li&gt;
+&lt;li&gt;这是每个文件里面的数据格式:
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 910px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;http://bff.github.io/docs/usage/initdata/init4_hu0fd4bdc29ce1673c4cd0636ecf5c451c_76592_900x900_fit_catmullrom_3.png&#34; width=&#34;900&#34; height=&#34;361&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;注意它必须是一个正确的json文件，并且必须是一个数组。从mongo中直接导出的数据需要看一看是否符合标准。&lt;/li&gt;
+&lt;li&gt;注意mongo的object id的写法，如上图&lt;/li&gt;
+&lt;li&gt;注意不需要有createAt updateAt&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
